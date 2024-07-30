@@ -12,7 +12,7 @@ class CustomRAG:
     def __init__(self, filePath: str):
         # load_dotenv()
         self.chat_history = []
-        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", google_api_key="AIzaSyDgxQKvx1M1XM4vMObBFw7xV-dZ6rZuYck")
+        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro-latest", google_api_key="Your Key goes here")
         dataLoad = DataLoader(filePath)
         self.retriever = dataLoad.dataLoader()
         system_prompt = "You are an AI bot. You will be given an context. You task is to answer the questions base on the context provided and the chat history.\
